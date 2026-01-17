@@ -1,0 +1,12 @@
+# logs
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+
+# v8 coverage
+coverage
+
+# vite
+.vite

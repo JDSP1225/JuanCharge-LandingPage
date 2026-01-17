@@ -1,0 +1,39 @@
+.features {
+  background-color: var(--white);
+  padding: var(--spacing-md) 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(18rem, 25vw, 22rem), 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.feature-card {
+  text-align: left;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.feature-title {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
