@@ -28,7 +28,7 @@ const Features = ({ id }) => {
       <div className="container">
         <div className="features-grid">
           {features.map((feature, index) => (
-            <div key={index} className="feature-card">
+            <div key={index} className="feature-item">
               <div className="feature-icon" style={{ color: feature.color }}>
                 {feature.icon}
               </div>

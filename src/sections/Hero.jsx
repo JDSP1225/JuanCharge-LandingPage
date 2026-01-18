@@ -23,13 +23,13 @@ const Hero = () => {
         
         <div className="hero-visuals">
           <div className="phone-mockup">
-            <img src="https://via.placeholder.com/250x500/2D2D2D/FFFFFF?text=App+Screen+1" alt="Phone Mockup 1" />
+            <img src="https://via.placeholder.com/250x500/4CAF50/FFFFFF?text=App+Landing" alt="Phone Mockup 1" />
           </div>
           <div className="phone-mockup">
-            <img src="https://via.placeholder.com/250x500/2D2D2D/FFFFFF?text=App+Screen+2" alt="Phone Mockup 2" />
+            <img src="https://via.placeholder.com/250x500/2196F3/FFFFFF?text=Dashboard" alt="Phone Mockup 2" />
           </div>
           <div className="phone-mockup">
-            <img src="https://via.placeholder.com/250x500/2D2D2D/FFFFFF?text=App+Screen+3" alt="Phone Mockup 3" />
+            <img src="https://via.placeholder.com/250x500/FFC107/FFFFFF?text=Rewards" alt="Phone Mockup 3" />
           </div>
         </div>
       </div>

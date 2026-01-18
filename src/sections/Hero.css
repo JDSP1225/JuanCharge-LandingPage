@@ -1,83 +1,109 @@
 .hero {
-  padding: var(--spacing-lg) 0;
+  padding: 6rem 0;
   background-color: var(--white);
   overflow: hidden;
   display: flex;
   align-items: center;
-  min-height: 80vh;
+  min-height: calc(100vh - 80px);
 }
 
 .hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(2rem, 5vw, 5rem);
 }
 
 .hero-content {
   flex: 1;
-  max-width: 40rem; /* 640px */
+  max-width: 50%;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .hero-title {
-  /* Using variable from index.css */
   margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: #111827;
 }
 
 .text-gradient {
-  color: var(--primary-green);
+  background: linear-gradient(90deg, #4CAF50 0%, #00BCD4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
 }
 
 .hero-description {
-  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+  font-size: clamp(1rem, 0.95rem + 0.4vw, 1.15rem);
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.7; /* Slightly tighter */
   margin-bottom: 2.5rem;
+  font-weight: 400;
 }
 
 .google-play-btn img {
-  height: clamp(3rem, 5vh, 4rem);
+  height: 3.5rem;
   transition: var(--transition);
+  border-radius: 0.5rem;
 }
 
 .google-play-btn:hover img {
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
 }
 
 .hero-visuals {
-  flex: 1.2;
+  flex: 1;
   display: flex;
-  gap: clamp(0.5rem, 2vw, 1.5rem);
+  gap: clamp(0.5rem, 2vw, 2rem);
   justify-content: flex-end;
   position: relative;
+  animation: slideIn 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .phone-mockup {
-  width: clamp(8rem, 15vw, 12rem);
-  border-radius: 1.25rem;
+  width: clamp(7rem, 12vw, 10.5rem);
+  border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-lg);
   transition: var(--transition);
+  background: #000; /* Bezels */
+  padding: 6px;
 }
 
 .phone-mockup img {
   width: 100%;
   display: block;
+  border-radius: 1.2rem;
 }
 
-.phone-mockup:nth-child(2) {
-  transform: translateY(-5%);
-}
+.phone-mockup:nth-child(1) { transform: translateY(0); }
+.phone-mockup:nth-child(2) { transform: translateY(-25px); }
+.phone-mockup:nth-child(3) { transform: translateY(5px); }
 
 .phone-mockup:hover {
-  transform: translateY(-8%) scale(1.02);
+  transform: translateY(-40px) scale(1.05);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+  z-index: 10;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @media (max-width: 1100px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
-    gap: 4rem;
+    gap: 5rem;
   }
   
   .hero-content {
@@ -87,7 +113,10 @@
   .hero-visuals {
     justify-content: center;
     width: 100%;
+    margin-top: 2rem;
   }
+  
+  .phone-mockup:nth-child(2) { transform: translateY(-15px); }
 }
 
 @media (max-width: 600px) {

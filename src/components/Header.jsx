@@ -1,12 +1,13 @@
 import React from 'react';
 import './Header.css';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   return (
     <header className="header">
       <div className="container header-container">
         <div className="logo">
-          <img src="https://via.placeholder.com/40x40" alt="JuanCharge Logo" className="logo-img" />
+          <img src={logo} alt="JuanCharge Logo" className="logo-img" />
           <span className="logo-text">JuanCharge</span>
         </div>
         <nav className="nav">

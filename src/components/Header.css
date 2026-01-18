@@ -1,12 +1,15 @@
 .header {
-  height: 80px;
+  height: clamp(5rem, 10vh, 6rem);
   display: flex;
   align-items: center;
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: var(--transition);
 }
 
 .header-container {
@@ -19,43 +22,60 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.75rem;
 }
 
 .logo-img {
-  width: 32px;
-  height: 32px;
+  width: 2.2rem;
+  height: auto;
 }
 
 .logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-main);
-  letter-spacing: -0.5px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.03em;
 }
+
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: clamp(1.5rem, 4vw, 3rem);
 }
 
 .nav-list {
   display: flex;
-  gap: 30px;
+  gap: 2rem;
 }
 
 .nav-list a {
-  font-weight: 500;
-  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #111827;
 }
 
 .nav-list a:hover {
   color: var(--primary-green);
+  opacity: 1;
 }
 
 .login-btn {
-  padding: 10px 30px;
+  padding: 0.6rem 2rem;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.login-btn:hover {
+  background-color: var(--secondary-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 175, 80, 0.2);
 }
 
 @media (max-width: 768px) {
