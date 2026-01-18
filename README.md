@@ -48,5 +48,5 @@ npm run build
 
 ## 🎨 Design Notes
 
-- **Typography**: [Outfit](https://fonts.google.com/specimen/Outfit) via Google Fonts.
+- **Typography**: [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts.
 - **Layout**: Fluid design system using `clamp()` and `rem` for seamless responsiveness and zoom handling.
