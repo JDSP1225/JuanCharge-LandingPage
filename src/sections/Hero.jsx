@@ -1,5 +1,8 @@
 import React from 'react';
 import './Hero.css';
+import appLandingNew from '../assets/app-landing-new.png';
+import appDashboardNew from '../assets/app-dashboard-new.png';
+import appRewardsNew from '../assets/app-rewards-new.png';
 
 const Hero = () => {
   return (
@@ -22,14 +25,14 @@ const Hero = () => {
         </div>
         
         <div className="hero-visuals">
-          <div className="phone-mockup">
-            <img src="https://via.placeholder.com/250x500/4CAF50/FFFFFF?text=App+Landing" alt="Phone Mockup 1" />
+          <div className="hero-screenshot">
+            <img src={appLandingNew} alt="App Onboarding" />
           </div>
-          <div className="phone-mockup">
-            <img src="https://via.placeholder.com/250x500/2196F3/FFFFFF?text=Dashboard" alt="Phone Mockup 2" />
+          <div className="hero-screenshot">
+            <img src={appDashboardNew} alt="App Dashboard" />
           </div>
-          <div className="phone-mockup">
-            <img src="https://via.placeholder.com/250x500/FFC107/FFFFFF?text=Rewards" alt="Phone Mockup 3" />
+          <div className="hero-screenshot">
+            <img src={appRewardsNew} alt="App Rewards" />
           </div>
         </div>
       </div>
