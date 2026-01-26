@@ -1,5 +1,6 @@
 import React from 'react';
 import './Maps.css';
+import mapSatellite from '../assets/map-satellite.png';
 
 const Maps = ({ id }) => {
   return (
@@ -7,10 +8,10 @@ const Maps = ({ id }) => {
       <div className="container">
         <div className="map-wrapper">
           <div className="map-overlay">
-            {/* The image shows a satellite view with markers */}
+            {/* Satellite view of Barangay 178 territory */}
             <img 
-              src="https://via.placeholder.com/1160x500?text=Satellite+Map+View" 
-              alt="Satellite Map" 
+              src={mapSatellite} 
+              alt="Satellite Map of Barangay 178" 
               className="map-image"
             />
           </div>

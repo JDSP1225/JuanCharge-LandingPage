@@ -63,31 +63,26 @@
   animation: slideIn 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.phone-mockup {
-  width: clamp(7rem, 12vw, 10.5rem);
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
+.hero-screenshot {
+  flex: 1;
+  max-width: 11.5rem;
+  min-width: 8rem;
   transition: var(--transition);
-  background: #000; /* Bezels */
-  padding: 6px;
 }
 
-.phone-mockup img {
+.hero-screenshot img {
   width: 100%;
+  height: auto;
   display: block;
-  border-radius: 1.2rem;
+  border-radius: 1rem; /* Keeping a subtle roundness for cleanliness */
 }
 
-.phone-mockup:nth-child(1) { transform: translateY(0); }
-.phone-mockup:nth-child(2) { transform: translateY(-25px); }
-.phone-mockup:nth-child(3) { transform: translateY(5px); }
-
-.phone-mockup:hover {
-  transform: translateY(-40px) scale(1.05);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
-  z-index: 10;
+/* Ensure equal height and alignment */
+.hero-visuals {
+  align-items: flex-start;
 }
+
+/* Removing old phone mockup specific styles */
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -116,11 +111,14 @@
     margin-top: 2rem;
   }
   
-  .phone-mockup:nth-child(2) { transform: translateY(-15px); }
+  .hero-screenshot {
+    max-width: 10rem;
+    min-width: 6rem;
+  }
 }
 
 @media (max-width: 600px) {
-  .phone-mockup:nth-child(3) {
+  .hero-screenshot:nth-child(3) {
     display: none;
   }
 }

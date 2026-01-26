@@ -7,12 +7,11 @@
   border-radius: clamp(1.5rem, 5vw, 2.5rem);
   overflow: hidden;
   box-shadow: 0 0.625rem 2rem rgba(0,0,0,0.1);
-  background-color: var(--off-white);
 }
 
 .map-image {
   width: 100%;
+  aspect-ratio: 16 / 9; /* Standard widescreen ratio */
   display: block;
   object-fit: cover;
-  min-height: clamp(20rem, 40vh, 31rem); /* 320px to 500px */
 }
