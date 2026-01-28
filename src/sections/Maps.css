@@ -4,14 +4,14 @@
 
 .map-wrapper {
   width: 100%;
-  border-radius: clamp(1.5rem, 5vw, 2.5rem);
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 20px; /* Matches the rounded corners in your image */
   overflow: hidden;
-  box-shadow: 0 0.625rem 2rem rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.map-image {
+.leaflet-container {
+  height: 450px; /* Adjust based on your UI needs */
   width: 100%;
-  aspect-ratio: 16 / 9; /* Standard widescreen ratio */
-  display: block;
-  object-fit: cover;
 }

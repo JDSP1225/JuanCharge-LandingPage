@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <Hero />
+        <Hero id="hero" />
         <Features id="features" />
         <Maps id="maps" />
         <Contact id="contact" />
