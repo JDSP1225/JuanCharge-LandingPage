@@ -1,12 +1,12 @@
 import React from 'react';
 import './Hero.css';
-import appLandingNew from '../assets/app-landing-new.png';
-import appDashboardNew from '../assets/app-dashboard-new.png';
-import appRewardsNew from '../assets/app-rewards-new.png';
+import mockUp_1 from '../assets/mockup-1.png';
+import mockUp_2 from '../assets/mockup-2.png';
+import mockUp_3 from '../assets/mockup-3.png';
 
-const Hero = () => {
+const Hero = ({ id }) => {
   return (
-    <section className="hero">
+    <section id={id} className="hero">
       <div className="container hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
@@ -23,16 +23,16 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="hero-visuals">
           <div className="hero-screenshot">
-            <img src={appLandingNew} alt="App Onboarding" />
+            <img src={mockUp_1} alt="App Starting" />
           </div>
           <div className="hero-screenshot">
-            <img src={appDashboardNew} alt="App Dashboard" />
+            <img src={mockUp_2} alt="Getting Started" />
           </div>
           <div className="hero-screenshot">
-            <img src={appRewardsNew} alt="App Rewards" />
+            <img src={mockUp_3} alt="Registration" />
           </div>
         </div>
       </div>
