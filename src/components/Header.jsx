@@ -17,7 +17,12 @@ const Header = () => {
             <a href="#maps">Maps</a>
             <a href="#contact">Contact</a>
           </div>
-          <button className="btn-primary login-btn">Login Now</button>
+          <button 
+            className="btn-primary login-btn"
+            onClick={() => window.location.href = 'https://juan-charge-client-1ang.vercel.app/login'}
+          >
+            Login Now
+          </button>
         </nav>
       </div>
     </header>
