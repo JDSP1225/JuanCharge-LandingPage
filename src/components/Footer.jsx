@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import logo from '../assets/Logo.png';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   return (
